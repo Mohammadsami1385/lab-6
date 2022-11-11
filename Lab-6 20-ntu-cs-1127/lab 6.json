@@ -1,0 +1,30 @@
+$(function(){
+$("img").click(function(){
+var c =$(this).attr("src");
+if(c=="bulb -on.jpg")
+{
+    $(this).attr("src","bulb off.jpg");
+}
+else
+{
+    $(this).attr("src","bulb -on.jpg");
+}
+}); 
+
+$("#t1").keyup(function () {  
+    $(this).val($(this).val().toUpperCase());
+});  
+$("#number1").keyup(function () {  
+   var a = parseInt($(this).val());  
+   var b = parseInt($("#number2").val());
+   var res = a + b ; 
+   $("#res").val(res);
+}); 
+$("#number2").keyup(function () {  
+   var a = parseInt($(this).val());  
+   var b = parseInt($("#number1").val());
+   var res = a + b ; 
+   $("#res").val(res);
+}); 
+    
+});
